@@ -20,10 +20,12 @@ test {
 }
 
 dependencies {
-    // JUnit
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
+    // Manage all JUnit versions via the BOM
+  testImplementation platform("org.junit:junit-bom:5.11.3")
+  testImplementation "org.junit.jupiter:junit-jupiter"          // API + params, etc.
+  testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine"      // Executes Jupiter tests
+  testRuntimeOnly "org.junit.platform:junit-platform-launcher"   // Required with Gradle 9+
 
     // Mockito
-    testImplementation 'org.mockito:mockito-core:4.2.0'
+    testImplementation "org.mockito:mockito-junit-jupiter:5.13.0"
 }
