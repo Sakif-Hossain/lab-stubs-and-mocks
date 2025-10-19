@@ -2,7 +2,7 @@ package city.service;
 import org.junit.jupiter.api.Test;
 
 import city.service.Address;
-import main.java.city.service.Utility;
+import city.service.Utility;
 import salary.service.City;
 import salary.service.Salary;
 import java.util.ArrayList;
